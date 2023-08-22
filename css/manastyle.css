@@ -1,0 +1,74 @@
+body {
+    padding-top: 1%;
+    padding-right: 2% ;
+    padding-left:2%;
+    background-color: lavender;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: rgb(123, 90, 166);
+    padding-bottom: 0.9%;
+  }
+  
+  table {
+    width: 100%;
+    border:solid rgb(123, 90, 166);
+    background-color: rgba(253, 253, 253, 0.313);
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  tr:first-child{
+    font-weight: bolder;
+    border: 100px;
+    border-bottom:dotted;
+    border-color:rgb(123, 90, 166);
+  }
+  .gotonewpage{
+    position: relative;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-bottom: 100px;
+    padding:30px 30px;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    border: none;
+    border-radius: 4px;
+    
+    }
+    #display,#contents,#search{
+      margin-left:10%;
+      margin-bottom: 5%;
+      background-color: rgb(123, 90, 166);
+      cursor: pointer;
+    }
+  
+    #display:hover,#contents:hover {
+      /* background-color: rgb(185, 102, 240) */
+      background-color: rgb(112, 43, 157) ;
+    }
+
+
+button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: rgb(123, 90, 166);
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+  }
+  
+button:hover {
+    background-color: rgb(112, 43, 157);
+  }
+

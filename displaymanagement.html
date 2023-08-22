@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/manastyle.css">
+    <title>Manage Page</title>
+    <script type="module" src="scr/displaymana.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <h1>Display Data</h1>
+    <table id="collectionData">
+        <tr>
+            <td>id</td>
+            <!-- <td>Email</td>
+            <td>Type</td> -->
+            <td>Field</td>
+            <!-- <td>Description</td>
+            <td>NetID</td> -->
+            <td>Display Contents</td>
+            <td>Delete</td>
+          </tr>
+    </table>
+    <div class="gotonewpage">
+    <button id="contents" onclick="openNewPage('manage.html')">Newly Received</button>
+    <button id="display" onclick="openNewPage('index.html')">Display Page</button>
+    <button id="search" onclick="openNewPage('datasearch.html')">Data Search</button>  
+  </div>
+    <script>
+        function openNewPage(page) {
+          // 设置目标页面的相对路径或绝对路径
+          var url = page;
+          window.open(url, "_blank"); // 打开新窗口或标签页
+        }
+      </script>
+      
+</body>
+</html>

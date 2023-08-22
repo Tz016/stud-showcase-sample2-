@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Facts Page</title>
+    <!-- <script type="text/javascript" src="scr/getdisplayData.js" defer></script> -->
+    <script src="libraries/p5.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+</head>
+
+<body>
+    <div id="canvasContainer"> </div>
+    <!-- <form id="myForm">
+        <input type="text" id="textInput" placeholder="输入内容">
+        <button type="submit">提交</button> -->
+    <div class="form-container">
+        <div class="myForm">
+            <form id="myForm">
+                <label for="email">Email*</label> <br />
+                <input type="text" id="email" placeholder="Please enter your email address" required />
+                <br /><br />
+                <label for="honorstype">Honors Type*</label> <br />
+                <select id="honorstype" required>
+                    <!-- <option selected="selected" disabled="disabled"  style='display: none' value=''></option>
+                <option class="options" value="awards">Awards</option>
+                <option class="options" value="research">Research</option>
+                <option class="options" value="other">Others</option>
+             -->
+                    <option selected="selected" disabled="disabled" style='display: none' value=''></option>
+                    <script>
+                        var options = ["Undergraduate Research Project", "Grant & Funding", "Conference Presentation", "Publication", "Academic Competition", "Non-academic Competition", "Academic Award & Honor", "Non-academic Award & Honor", "Scholarship & Fellowship", "Other (please specify)"];
+                        for (var i = 0; i < options.length; i++) {
+                            document.write("<option class='options' value='" + options[i] + "'>" + options[i] + "</option>");
+                        }
+                    </script>
+                </select><br /><br />
+                <label for="honorsfield">Honors Field*</label> <br />
+                <select id="honorsfield" required>
+                    <option selected="selected" disabled="disabled" style="display: none" value=""></option>
+                    <script>
+                        var majors = [
+                            "General",
+                            "Biology",
+                            "Business and Finance",
+                            "Business and Marketing",
+                            "Computer Systems Engineering",
+                            "Chemistry",
+                            "Computer Science",
+                            "Data Science",
+                            "Economics",
+                            "Electrical and Systems Engineering",
+                            "Global China Studies",
+                            "Honors Mathematics",
+                            "Humanities",
+                            "Interactive Media and Business",
+                            "Interactive Media Arts",
+                            "Mathematics",
+                            "Neural Science",
+                            "Physics",
+                            "Social Science",
+                            "Self-Designed Honors Major (SDHM)",
+                            "Other (please specify)"
+                        ];
+
+                        for (var i = 0; i < majors.length; i++) {
+                            document.write("<option value='" + majors[i] + "'>" + majors[i] + "</option>");
+                        }
+                    </script>
+
+                    <!-- <option selected="selected" disabled="disabled"  style='display: none' value=''></option>
+                <option class="options" value="Art">Art</option>
+                <option class="options" value="Maths">Maths</option>
+                <option class="options" value="Computer Science">Computer Science</option>
+                <option class="options" value="Neural Science">Neural Science</option>
+                <option class="options" value="IMA">IMA</option>
+                <option class="options" value="Business&Finance">Business&Finance</option>
+                <option class="options" value="Econimics">Econimics</option>
+                <option class="options" value="Others">Others</option> -->
+                </select><br /><br />
+                <label for="description">Description</label> <br />
+                <textarea type="text" id="description" rows=3
+                    placeholder="Please briefly describe the honors"></textarea>
+                <br /><br />
+                <label for="netid">NetID</label> <br />
+                <input type="text" id="netid" placeholder="Please enter your NetID" />
+                <br /><br />
+                <label for="availability">Would you like to have your email information kept publicly accessible?*</label>
+                <select id="availability" required>
+                    <option selected="selected" disabled="disabled" style="display: none" value=""></option>
+                    <option  value='"named"'>Named</option>
+                    <option  value='"anonymous"'>Anonymous</option>
+                </select>
+                <br/><br/>
+                <label for="terms">
+                    <input type="checkbox" id="terms" required> I confirm that the above information can be made
+                    publicly available.*
+                </label><br />
+                <!-- <script>var f=document.getElementById("honorsfield").value</script> -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="text">
+            <p id="scusubmit" style='display: none'>Submit Successfully!<br>We will xxxx</p>
+            <p id="notes" style='display: block'>Notes:<br>xxxxxxxxx </p>
+        </div>
+    </div>
+
+    <script type="module" src="scr/firebase.js"></script>
+    <script type="text/javascript" src="scr/sketch.js"></script>
+</body>
+
+</html>
